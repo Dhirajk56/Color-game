@@ -1,0 +1,95 @@
+/* Centering main container and adding spacing */
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f8e179;
+  position: relative;
+  backdrop-filter: blur(10px);
+  font-family: Arial, sans-serif;
+}
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(https://wallpaperaccess.com/full/1554324.jpg);
+  background-size: cover;
+  z-index: -1;
+  filter: blur(10px);
+}
+/* Tube container with a cleaner look */
+.container {
+  position: relative;
+  width: 50%;
+  height: 60%;
+  padding: 30px;
+  /* background: url(https://media.timeout.com/images/105636969/image.jpg); */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  z-index: -1;
+}
+/* Individual tube (glass) styling */
+.glass {
+  padding-top: 10px;
+  width: 12%;
+  height: 60%;
+  border: 2px solid #7c7b7b;
+  border-radius: 0 0 30px 30px;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* background-color: #ffffff; */
+  transition: transform 0.3s ease;
+}
+
+.glass:hover {
+  transform: scale(1.05);
+  border-color: #999;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Color segment within each tube */
+.color {
+  height: 25%;
+  width: 100%;
+}
+
+/* Button styling */
+button {
+  width: 110px;
+  height: 45px;
+  background-color: #26c81d;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background-color: #5ae65e;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
